@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
 import Background from "./Background";
+import FrontXLogo from "./Icons/FrontXLogo";
 import Title from "./Title";
 
 const styles = StyleSheet.create({
@@ -17,10 +18,10 @@ const styles = StyleSheet.create({
 interface FrontXProps {
   still: boolean;
   darkMode: boolean;
-  noTitle?: boolean;
+  isX?: boolean;
 }
 
-const FrontX = ({ darkMode, still, noTitle }: FrontXProps) => {
+const FrontX = ({ darkMode, still, isX }: FrontXProps) => {
   const currentFrame = useCurrentFrame();
   const opacity = darkMode
     ? interpolate(currentFrame, [0, 2 * 24], [1, 0], {
@@ -49,7 +50,7 @@ const FrontX = ({ darkMode, still, noTitle }: FrontXProps) => {
           alignItems: "center",
         }}
       >
-        {!noTitle && <Title darkMode={darkMode} still={still} />}
+        {isX ? <Title darkMode={darkMode} still={still} /> : <FrontXLogo />}
       </View>
       <View
         style={{
