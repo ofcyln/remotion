@@ -1,5 +1,6 @@
 import { View } from "react-native";
-import { Sequence, useVideoConfig } from "remotion";
+import { Audio, Sequence, useVideoConfig } from "remotion";
+import audio from "./assets/mp3/acdc.mp3";
 import FrontX from "./FrontX";
 import RotationX from "./RotationX";
 import ScaleFront from "./ScaleFront";
@@ -10,6 +11,7 @@ const Comp = () => {
   const from = (index: number) => cuts.slice(0, index).reduce((a, v) => a + v);
   return (
     <View style={{ flex: 1 }}>
+      <Audio src={audio} />
       <Sequence from={0} durationInFrames={cuts[0]} name="Title Dark">
         <FrontX darkMode={true} still={true} isX={true} />
       </Sequence>
