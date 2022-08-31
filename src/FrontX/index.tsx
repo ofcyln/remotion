@@ -11,7 +11,13 @@ const Comp = () => {
   const from = (index: number) => cuts.slice(0, index).reduce((a, v) => a + v);
   return (
     <View style={{ flex: 1 }}>
-      <Audio src={audio} />
+      <Sequence
+        from={0}
+        durationInFrames={cuts.reduce((acc, curr) => acc + curr, 0)}
+        name="Audio"
+      >
+        <Audio src={audio} />
+      </Sequence>
       <Sequence from={0} durationInFrames={cuts[0]} name="Title Dark">
         <FrontX darkMode={true} still={true} isX={true} />
       </Sequence>
