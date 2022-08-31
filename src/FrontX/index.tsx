@@ -1,11 +1,11 @@
 import { View } from "react-native";
 import { Sequence, useVideoConfig } from "remotion";
 import FrontX from "./FrontX";
-import Rotation from "./Rotation";
+import RotationX from "./RotationX";
 
 const Comp = () => {
   const { fps } = useVideoConfig();
-  const cuts = [2 * fps, 2 * fps, 2 * fps] as const;
+  const cuts = [2 * fps, 37] as const;
   const from = (index: number) => cuts.slice(0, index).reduce((a, v) => a + v);
   return (
     <View style={{ flex: 1 }}>
@@ -26,8 +26,8 @@ const Comp = () => {
       </Sequence>
       <Sequence from={from(5)} durationInFrames={cuts[5]} name="Signs Dark">
         <SignsDark />
-      </Sequence> */}
-      {/* <Sequence from={from(6)} durationInFrames={cuts[6]} name="Logo Light">
+      </Sequence> 
+      <Sequence from={from(6)} durationInFrames={cuts[6]} name="Logo Light">
         <LogoLight />
       </Sequence>
       <Sequence from={from(7)} durationInFrames={cuts[7]} name="Logo Light">
@@ -36,12 +36,10 @@ const Comp = () => {
       <Sequence from={from(8)} durationInFrames={cuts[8]} name="Logo Light">
         <Roulette />
       </Sequence> */}
-      <Sequence from={from(1)} durationInFrames={cuts[1]} name="Rotation">
-        <Rotation isX={true} />
+      <Sequence from={from(1)} durationInFrames={cuts[1]} name="RotationX">
+        <RotationX />
       </Sequence>
-      <Sequence from={from(2)} durationInFrames={cuts[2]} name="Rotation">
-        <Rotation isX={false} />
-      </Sequence>
+
       {/* <Sequence from={from(10)} durationInFrames={cuts[10]} name="Rotation">
         <MainTitle />
       </Sequence> */}
