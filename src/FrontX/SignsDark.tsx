@@ -1,9 +1,7 @@
 /* eslint-disable max-len */
 import { View } from "react-native";
 import { interpolate, useCurrentFrame } from "remotion";
-
 import { Extrapolate } from "../components/Redash";
-
 import ReactLogo from "./ReactLogo";
 
 const SignsDark = () => {
@@ -20,7 +18,7 @@ const SignsDark = () => {
         flexDirection: "row",
       }}
     >
-      <svg
+      {/* <svg
         width="490"
         height="490"
         viewBox="0 0 490 490"
@@ -35,9 +33,9 @@ const SignsDark = () => {
           stroke-linecap="round"
           stroke-linejoin="round"
         />
-      </svg>
+      </svg> */}
       <ReactLogo progress={progress} stroke={stroke / 2} />
-      <svg
+      {/* <svg
         width="490"
         height="490"
         viewBox="0 0 490 490"
@@ -52,7 +50,7 @@ const SignsDark = () => {
           stroke-linecap="round"
           stroke-linejoin="round"
         />
-      </svg>
+      </svg> */}
     </View>
   );
 };

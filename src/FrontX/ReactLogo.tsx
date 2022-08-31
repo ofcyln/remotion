@@ -1,10 +1,6 @@
 /* eslint-disable max-len */
-import { useRef, useState } from "react";
-import { Dimensions, StyleSheet, View } from "react-native";
-import Svg, { Ellipse, Circle } from "react-native-svg";
-import { continueRender, delayRender, interpolate } from "remotion";
+import { interpolate } from "remotion";
 import { svgPathProperties } from "svg-path-properties";
-
 import { Extrapolate } from "../components/Redash";
 
 interface AnimatedLogoProps {

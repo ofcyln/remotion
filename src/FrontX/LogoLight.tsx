@@ -1,11 +1,10 @@
 /* eslint-disable max-len */
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { interpolate, useCurrentFrame } from "remotion";
-
 import { Extrapolate } from "../components/Redash";
-
 import Background from "./Background";
+import X from "./Icons/X";
 
 const LogoLight = () => {
   const frame = useCurrentFrame();
@@ -41,6 +40,7 @@ const LogoLight = () => {
           alignItems: "center",
         }}
       >
+        <X />
         <svg
           width="1208"
           height="1208"

@@ -1,17 +1,30 @@
 import { View } from "react-native";
-import { interpolate, useCurrentFrame } from "remotion";
-
+import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Extrapolate } from "../components/Redash";
-
-import Heart from "./Icons/Heart";
-import Robot from "./Icons/Robot";
+import Front from "./Icons/Front";
 import X from "./Icons/X";
 
-const Rotation = () => {
+export interface UseRotationParams {
+  isX?: boolean;
+}
+
+const Rotation = ({ isX = false }: UseRotationParams) => {
   const frame = useCurrentFrame();
-  const rotate = interpolate(frame, [0, 10], [0, 45], Extrapolate.CLAMP);
-  const translateY = interpolate(frame, [0, 10], [0, 350], Extrapolate.CLAMP);
-  const scale = interpolate(frame, [10, 17], [1, 0.75], Extrapolate.CLAMP);
+  const { fps } = useVideoConfig();
+  const rotate = interpolate(
+    frame,
+    [!isX ? 20 : 0, 2 * fps],
+    [0, 1080],
+    Extrapolate.CLAMP
+  );
+  // const translateY = interpolate(frame, [0, 10], [0, 350], Extrapolate.CLAMP);
+  const scale = interpolate(
+    frame,
+    [10, 17],
+    [1, !isX ? 2 : 1],
+    Extrapolate.CLAMP
+  );
+
   return (
     <View
       style={{
@@ -24,20 +37,18 @@ const Rotation = () => {
       <View
         style={{
           flexDirection: "row",
-          height: 400,
           alignItems: "center",
-          overflow: "hidden",
         }}
       >
-        <View style={{ transform: [{ translateY }] }}>
-          <Heart />
-        </View>
-        <View style={{ transform: [{ scale }, { rotate: `${rotate}deg` }] }}>
-          <X />
-        </View>
-        <View style={{ transform: [{ translateY }] }}>
-          <Robot />
-        </View>
+        {isX ? (
+          <View style={{ transform: [{ scale }, { rotate: `${rotate}deg` }] }}>
+            <X />
+          </View>
+        ) : (
+          <View style={{ transform: [{ scale }, { rotate: `${rotate}deg` }] }}>
+            <Front />
+          </View>
+        )}
       </View>
     </View>
   );

@@ -1,19 +1,17 @@
 import { View } from "react-native";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
-
 import { Extrapolate } from "../components/Redash";
-
-import Heart from "./Icons/Heart";
-import Skull from "./Icons/Skull";
+import Box from "./Icons/Box";
+import Cat from "./Icons/Cat";
+import Cyclop from "./Icons/Cyclop";
+import Evil from "./Icons/Evil";
+import Eye from "./Icons/Eye";
+import Front from "./Icons/Front";
+import Mute from "./Icons/Mute";
+import Pyramid from "./Icons/Pyramid";
 import Robot from "./Icons/Robot";
 import Sadomazofembotochist from "./Icons/Sadomazofembotochist";
-import Mute from "./Icons/Mute";
-import Eye from "./Icons/Eye";
-import Cat from "./Icons/Cat";
-import Pyramid from "./Icons/Pyramid";
-import Evil from "./Icons/Evil";
-import Cyclop from "./Icons/Cyclop";
-import Box from "./Icons/Box";
+import Skull from "./Icons/Skull";
 import X from "./Icons/X";
 
 const Roulette = () => {
@@ -46,7 +44,7 @@ const Roulette = () => {
         }}
       >
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -57,7 +55,7 @@ const Roulette = () => {
           <Robot />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -68,7 +66,7 @@ const Roulette = () => {
           <Sadomazofembotochist />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -79,7 +77,7 @@ const Roulette = () => {
           <Mute />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -90,7 +88,7 @@ const Roulette = () => {
           <Pyramid />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -101,7 +99,7 @@ const Roulette = () => {
           <Robot />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -112,7 +110,7 @@ const Roulette = () => {
           <Cat />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -123,7 +121,7 @@ const Roulette = () => {
           <Evil />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -134,7 +132,7 @@ const Roulette = () => {
           <Eye />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}
@@ -145,7 +143,7 @@ const Roulette = () => {
           <Cyclop />
         </View>
         <View style={{ marginVertical }}>
-          <Heart />
+          <Front />
         </View>
         <View
           style={{ marginVertical, transform: [{ translateY: translateY1 }] }}

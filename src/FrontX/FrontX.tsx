@@ -1,8 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
 import Background from "./Background";
-import Circle from "./Circle";
-import Rect from "./Rect";
 import Title from "./Title";
 
 const styles = StyleSheet.create({
@@ -39,11 +37,11 @@ const FrontX = ({ darkMode, still, noTitle }: FrontXProps) => {
           style={{ ...StyleSheet.absoluteFillObject, backgroundColor: "black" }}
         />
       ) : null}
-      <View style={styles.footer}>
+      {/* <View style={styles.footer}>
         <Rect darkMode={darkMode} />
         <Circle darkMode={darkMode} />
         <Rect darkMode={darkMode} />
-      </View>
+      </View> */}
       <View
         style={{
           ...StyleSheet.absoluteFillObject,

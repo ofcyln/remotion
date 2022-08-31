@@ -4,7 +4,7 @@ import { StyleSheet, View } from "react-native";
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
-    backgroundImage: "radial-gradient(#F0E6E0 61%, #8B918D);",
+    backgroundImage: "#000",
     filter: "blur(40px)",
   },
 });
