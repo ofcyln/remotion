@@ -38,11 +38,6 @@ const FrontX = ({ darkMode, still, isX }: FrontXProps) => {
           style={{ ...StyleSheet.absoluteFillObject, backgroundColor: "black" }}
         />
       ) : null}
-      {/* <View style={styles.footer}>
-        <Rect darkMode={darkMode} />
-        <Circle darkMode={darkMode} />
-        <Rect darkMode={darkMode} />
-      </View> */}
       <View
         style={{
           ...StyleSheet.absoluteFillObject,

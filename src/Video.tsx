@@ -7,8 +7,7 @@ export const RemotionVideo = () => {
       <Composition
         id="FrontX"
         component={FrontX}
-        // TODO
-        durationInFrames={14 * 24}
+        durationInFrames={179}
         fps={24}
         width={3840}
         height={2160}
